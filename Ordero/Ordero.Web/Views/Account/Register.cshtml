@@ -1,6 +1,4 @@
-﻿@model AccountRegister
-
-@using Ordero.Web.Models.Account;
+﻿@model Ordero.Web.Models.AccountRegister
 
 @{
     ViewBag.Title = "Register";
@@ -28,7 +26,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(u => u.Password)
-                    @Html.PasswordFor(u => u.Username, new { @class = "form-control", placeholder = Model.Password })
+                    @Html.PasswordFor(u => u.Password, new { @class = "form-control", placeholder = Model.Password })
                     @Html.ValidationMessageFor(u => u.Password)
                 </div>
 

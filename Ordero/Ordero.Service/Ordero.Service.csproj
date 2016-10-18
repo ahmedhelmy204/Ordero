@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,13 +42,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\FormsAuthenticationService.cs" />
+    <Compile Include="Authentication\IAuthenticationService.cs" />
+    <Compile Include="Authentication\IOrderoPrincipalService.cs" />
+    <Compile Include="Authentication\OrderoPrincipalService.cs" />
     <Compile Include="Common\IOrderoResult.cs" />
     <Compile Include="Common\OrderoResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\EncryptionService.cs" />
+    <Compile Include="Security\IEncryptionService.cs" />
+    <Compile Include="Security\IPermissionService.cs" />
+    <Compile Include="Security\PermissionService.cs" />
+    <Compile Include="Users\ChangePasswordRequest.cs" />
+    <Compile Include="Users\IRoleService.cs" />
     <Compile Include="Users\IUserRegistrationService.cs" />
+    <Compile Include="Users\IUserService.cs" />
+    <Compile Include="Users\RoleService.cs" />
     <Compile Include="Users\UserRegistrationService.cs" />
+    <Compile Include="Users\UserService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Ordero.Core\Ordero.Core.csproj">
+      <Project>{9a883759-ca79-4cbb-be4b-f036ed9aa30a}</Project>
+      <Name>Ordero.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ordero.Data\Ordero.Data.csproj">
+      <Project>{0b38c9f8-54ca-430c-841d-e7b7e22fd16f}</Project>
+      <Name>Ordero.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

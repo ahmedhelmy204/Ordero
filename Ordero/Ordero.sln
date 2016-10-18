@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordero.Service", "Ordero.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordero.Web", "Ordero.Web\Ordero.Web.csproj", "{CC6F0FD3-E009-48EA-82A3-2CCF607FCB70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordero.Web.Framework", "Ordero.Web.Framework\Ordero.Web.Framework.csproj", "{00F24DAB-6FCD-4225-8A9D-8CBB814C2175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{CC6F0FD3-E009-48EA-82A3-2CCF607FCB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC6F0FD3-E009-48EA-82A3-2CCF607FCB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC6F0FD3-E009-48EA-82A3-2CCF607FCB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F24DAB-6FCD-4225-8A9D-8CBB814C2175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F24DAB-6FCD-4225-8A9D-8CBB814C2175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F24DAB-6FCD-4225-8A9D-8CBB814C2175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F24DAB-6FCD-4225-8A9D-8CBB814C2175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +52,6 @@ Global
 		{0B38C9F8-54CA-430C-841D-E7B7E22FD16F} = {C86F53C2-D475-477D-808D-0659868820DB}
 		{85FBE53A-EED2-4F3A-B503-08FEF58A9E36} = {C86F53C2-D475-477D-808D-0659868820DB}
 		{CC6F0FD3-E009-48EA-82A3-2CCF607FCB70} = {E3DC5250-DD9A-4A94-BA7A-48E1BA349E34}
+		{00F24DAB-6FCD-4225-8A9D-8CBB814C2175} = {E3DC5250-DD9A-4A94-BA7A-48E1BA349E34}
 	EndGlobalSection
 EndGlobal

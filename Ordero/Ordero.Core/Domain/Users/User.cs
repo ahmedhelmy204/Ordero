@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordero.Core.Domain.Users
+namespace Ordero.Core.Domain
 {
     /// <summary>
     /// Represents a user
@@ -33,6 +33,11 @@ namespace Ordero.Core.Domain.Users
         public string PasswordSalt { get; set; }
 
         /// <summary>
+        /// Gets or sets the role id
+        /// </summary>
+        public int RoleId { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether the user is active
         /// </summary>
         /// <remarks>true: if user is active, false: otherwise</remarks>
@@ -43,5 +48,7 @@ namespace Ordero.Core.Domain.Users
         /// </summary>
         /// <remarks>true: if user has been deleted, false: otherwise</remarks>
         public bool IsDeleted { get; set; }
+
+        public virtual Role Role { get; set; }
     }
 }

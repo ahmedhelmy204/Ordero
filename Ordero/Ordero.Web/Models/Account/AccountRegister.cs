@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Ordero.Web.Models.Account
+namespace Ordero.Web.Models
 {
     public class AccountRegister
     {

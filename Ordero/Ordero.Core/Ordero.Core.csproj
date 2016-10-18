@@ -31,7 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +44,20 @@
   <ItemGroup>
     <Compile Include="Basis\AuditableEntity.cs" />
     <Compile Include="Basis\BaseEntity.cs" />
+    <Compile Include="Basis\IWorkContext.cs" />
+    <Compile Include="Caching\CacheExtensions.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="Caching\PerRequestCacheManager.cs" />
+    <Compile Include="Caching\WebCacheManager.cs" />
+    <Compile Include="Domain\Permissions\Permission.cs" />
+    <Compile Include="Domain\Permissions\PermissionRole.cs" />
+    <Compile Include="Domain\Users\Role.cs" />
+    <Compile Include="Domain\Users\SystemUserRoleNames.cs" />
     <Compile Include="Domain\Users\User.cs" />
+    <Compile Include="Domain\Users\UserExtensions.cs" />
+    <Compile Include="Enums\Users\UserLoginResults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\StandardPermissionProvider.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

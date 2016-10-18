@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordero.Service.Common
+namespace Ordero.Service
 {
     /// <summary>
     /// Ordero result interface
