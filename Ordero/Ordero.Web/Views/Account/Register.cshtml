@@ -1,0 +1,43 @@
+﻿@model AccountRegister
+
+@using Ordero.Web.Models.Account;
+
+@{
+    ViewBag.Title = "Register";
+}
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend>Register new account</legend>
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.LabelFor(u => u.Username)
+                    @Html.TextBoxFor(u => u.Username, new { @class = "form-control", placeholder = Model.Username })
+                    @Html.ValidationMessageFor(u => u.Username)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(u => u.Email)
+                    @Html.TextBoxFor(u => u.Email, new { @class = "form-control", placeholder = Model.Email })
+                    @Html.ValidationMessageFor(u => u.Email)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(u => u.Password)
+                    @Html.PasswordFor(u => u.Username, new { @class = "form-control", placeholder = Model.Password })
+                    @Html.ValidationMessageFor(u => u.Password)
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            }
+        </fieldset>
+    </div>
+</div>
