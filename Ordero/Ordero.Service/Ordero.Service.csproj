@@ -48,7 +48,11 @@
     <Compile Include="Authentication\OrderoPrincipalService.cs" />
     <Compile Include="Common\IOrderoResult.cs" />
     <Compile Include="Common\OrderoResult.cs" />
+    <Compile Include="Installation\CodeFirstInstallationService.cs" />
+    <Compile Include="Installation\IInstallationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurants\IRestaurantService.cs" />
+    <Compile Include="Restaurants\RestaurantService.cs" />
     <Compile Include="Security\EncryptionService.cs" />
     <Compile Include="Security\IEncryptionService.cs" />
     <Compile Include="Security\IPermissionService.cs" />

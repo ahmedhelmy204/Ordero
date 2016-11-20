@@ -174,10 +174,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account\AccountRegister.cs" />
+    <Compile Include="Models\Restaurant\RestaurantModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +223,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Restaurant\Save.cshtml" />
+    <Content Include="Views\Restaurant\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +242,10 @@
     <ProjectReference Include="..\Ordero.Core\Ordero.Core.csproj">
       <Project>{9a883759-ca79-4cbb-be4b-f036ed9aa30a}</Project>
       <Name>Ordero.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ordero.Data\Ordero.Data.csproj">
+      <Project>{0B38C9F8-54CA-430C-841D-E7B7E22FD16F}</Project>
+      <Name>Ordero.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ordero.Service\Ordero.Service.csproj">
       <Project>{85FBE53A-EED2-4F3A-B503-08FEF58A9E36}</Project>

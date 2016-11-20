@@ -92,6 +92,9 @@ namespace Ordero.Web.Framework
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IRoleService, RoleService>();
 
+            // restaurants
+            container.RegisterType<IRestaurantService, RestaurantService>();
+
             // localization
 
             // seo

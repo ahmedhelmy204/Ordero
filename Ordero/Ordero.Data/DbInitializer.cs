@@ -8,23 +8,21 @@ using System.Threading.Tasks;
 
 namespace Ordero.Data
 {
-    public class DbInitializer : CreateDatabaseIfNotExists<OrderoEntities>
+    public class DbInitializer: DropCreateDatabaseIfModelChanges<OrderoEntities>
     {
+        public DbInitializer()
+        {
+           
+        }
+
         protected override void Seed(OrderoEntities context)
         {
             IList<Role> defaultRoles = new List<Role>();
 
             defaultRoles.Add(new Role() { Name = "Registered", SystemName = "Registered", InsertedOn = DateTime.Now, IsActive = true });
 
-            //IList<Standard> defaultStandards = new List<Standard>();
-
-            //defaultStandards.Add(new Standard() { StandardName = "Standard 1", Description = "First Standard" });
-            //defaultStandards.Add(new Standard() { StandardName = "Standard 2", Description = "Second Standard" });
-            //defaultStandards.Add(new Standard() { StandardName = "Standard 3", Description = "Third Standard" });
-
-            //foreach (Standard std in defaultStandards)
-            //    context.Standards.Add(std);
-
+           
+            context.Roles.AddRange(defaultRoles);
             base.Seed(context);
         }
     }

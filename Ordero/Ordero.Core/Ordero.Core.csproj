@@ -49,8 +49,14 @@
     <Compile Include="Caching\ICacheManager.cs" />
     <Compile Include="Caching\PerRequestCacheManager.cs" />
     <Compile Include="Caching\WebCacheManager.cs" />
+    <Compile Include="Data\IDataProvider.cs" />
+    <Compile Include="Domain\Orders\Order.cs" />
+    <Compile Include="Domain\Orders\OrderDetail.cs" />
     <Compile Include="Domain\Permissions\Permission.cs" />
     <Compile Include="Domain\Permissions\PermissionRole.cs" />
+    <Compile Include="Domain\Restaurants\Menu.cs" />
+    <Compile Include="Domain\Restaurants\MenuItem.cs" />
+    <Compile Include="Domain\Restaurants\Restaurant.cs" />
     <Compile Include="Domain\Users\Role.cs" />
     <Compile Include="Domain\Users\SystemUserRoleNames.cs" />
     <Compile Include="Domain\Users\User.cs" />

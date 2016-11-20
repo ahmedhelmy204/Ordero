@@ -52,6 +52,22 @@ namespace Ordero.Core.Domain
             return IsInUserRole(user, StandardPermissionProvider.AccessSiteArea.SystemName, onlyActiveUserRoles);
         }
 
-  
+
+        public static string GetUsername(this User user)
+        {
+            if (!String.IsNullOrEmpty(user.Username))
+                return user.Username;
+
+            if (!String.IsNullOrEmpty(user.Email))
+                return user.Email;
+
+            if (!String.IsNullOrEmpty(user.Id.ToString()))
+                return user.Id.ToString();
+
+
+            return "";
+        }
+
+
     }
 }

@@ -26,6 +26,13 @@ namespace Ordero.Data
         public virtual DbSet<PermissionRole> PermissionRoles { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
+
+        public virtual DbSet<Restaurant> Restaurants { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
+        public virtual DbSet<MenuItem> MenuItems { get; set; }
+
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
     }
 
 }

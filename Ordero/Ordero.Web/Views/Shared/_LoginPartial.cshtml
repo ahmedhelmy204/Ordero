@@ -1,0 +1,11 @@
+﻿@using Ordero.Core;
+@using Ordero.Core.Domain;
+
+@{ 
+    IWorkContext _workContext = DependencyResolver.Current.GetService<IWorkContext>();
+}
+
+@if (Request.IsAuthenticated)
+{
+    <li><a href="#">@_workContext.CurrentUser.GetUsername() </a></li>
+}

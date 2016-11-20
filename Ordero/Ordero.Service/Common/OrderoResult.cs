@@ -12,6 +12,14 @@ namespace Ordero.Service
     public class OrderoResult : IOrderoResult
     {
         /// <summary>
+        /// Ctor
+        /// </summary>
+        public OrderoResult()
+        {
+            this.Errors = new List<string>();
+        }
+
+        /// <summary>
         /// Gets a value indicating whether request has been completed successfully
         /// </summary>
         public bool Success
@@ -19,17 +27,18 @@ namespace Ordero.Service
             get { return (this.Errors.Count == 0); }
         }
 
-        public IList<string> Errors
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        /// <summary>
+        /// Errors
+        /// </summary>
+        public IList<string> Errors { get; private set; }
 
+        /// <summary>
+        /// Add error
+        /// </summary>
+        /// <param name="error">Error</param>
         public void AddError(string error)
         {
-            throw new NotImplementedException();
+            this.Errors.Add(error);
         }
     }
 }

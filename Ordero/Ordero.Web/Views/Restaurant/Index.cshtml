@@ -1,0 +1,26 @@
+﻿@model List<Ordero.Core.Domain.Restaurant>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Restaurants</h2>
+
+@Html.ActionLink("Add Restaurant", "Save", "Restaurant")
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

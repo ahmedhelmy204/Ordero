@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,18 +53,11 @@
     <Compile Include="DbInitializer.cs" />
     <Compile Include="EfRepository.cs" />
     <Compile Include="IDbContext.cs" />
+    <Compile Include="Initializers\CreateTablesIfNotExist.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="Migrations\201610181108531_InitialCreate.cs" />
-    <Compile Include="Migrations\201610181108531_InitialCreate.Designer.cs">
-      <DependentUpon>201610181108531_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610181120388_Initial.cs" />
-    <Compile Include="Migrations\201610181120388_Initial.Designer.cs">
-      <DependentUpon>201610181120388_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderoEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerDataProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ordero.Core\Ordero.Core.csproj">
@@ -76,12 +70,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610181108531_InitialCreate.resx">
-      <DependentUpon>201610181108531_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610181120388_Initial.resx">
-      <DependentUpon>201610181120388_Initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
